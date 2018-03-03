@@ -1,7 +1,26 @@
-<h2>{{ hero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{hero.id}}</div>
+<h2>My Heroes</h2>
+  <ul class="heroes">
+  <li *ngFor="let hero of heroes"
+  (click)="onSelect(hero)"
+  [class.selected]="hero === selectedHero"> <!--repetidor-->
+    <span class="badge" >{{hero.id}} </span> {{hero.name}}
+  </li>
+<!-- In this example
+    <li> is the host element
+    heroes is the list from the HeroesComponent class.
+    hero holds the current hero object for each iteration through the list.
+-->
+</ul>
+
+
+
+<div *ngIf="selectedHero">
+
+<h2>{{ selectedHero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{selectedHero.id}}</div>
+
 <div>
-    <label>name:
-      <input [(ngModel)]="hero.name" placeholder="name">
-    </label>
+  <label>name:
+    <input [(ngModel)]="selectedHero.name" placeholder="name">
+  </label>
 </div>
