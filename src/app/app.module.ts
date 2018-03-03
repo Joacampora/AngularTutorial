@@ -5,12 +5,14 @@ import { FormsModule } from '@angular/forms'; // <= NgModel, para las inputs - E
 
 import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ],
   imports: [    // Lista de modulos externos necesarios para la app
     BrowserModule,

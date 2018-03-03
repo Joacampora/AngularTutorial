@@ -11,16 +11,4 @@
     hero holds the current hero object for each iteration through the list.
 -->
 </ul>
-
-
-
-<div *ngIf="selectedHero">
-
-<h2>{{ selectedHero.name | uppercase}} Details</h2>
-<div><span>id: </span>{{selectedHero.id}}</div>
-
-<div>
-  <label>name:
-    <input [(ngModel)]="selectedHero.name" placeholder="name">
-  </label>
-</div>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail> <!--[hero]="selectedHero" is an Angular property binding.-->
