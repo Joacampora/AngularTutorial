@@ -1,5 +1,9 @@
 <h1 style="text-align:center">Welcome to {{ title }}!</h1>
-      <div>
-        <app-heroes></app-heroes>
-        <app-messages></app-messages>
-          </div>
+<!--<app-heroes></app-heroes>, removed ecause you will only display the HeroesComponent when the user navigates to it. -->
+<nav>
+  <a routerLink="/dashboard">Dashboard</a>
+  <a routerLink="/heroes">My Heroes</a> <!--routerLink is the selector for the RouterLink
+                                            directive that turns user clicks into router navigations-->
+</nav>
+  <router-outlet></router-outlet> <!--tells the router where to display routed views.-->
+  <app-messages></app-messages>
